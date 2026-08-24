@@ -1172,6 +1172,232 @@
             line-height: 1.7
         }
 
+        /* ══ ACHIEVEMENTS ══ */
+        .achieve-spotlight {
+            position: relative;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            align-items: stretch;
+            background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-el) 100%);
+            border: 1px solid var(--accent-border);
+            border-radius: 20px;
+            overflow: hidden
+        }
+
+        .spotlight-img {
+            position: relative;
+            min-height: 240px;
+            overflow: hidden
+        }
+
+        .spotlight-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            filter: saturate(1.05)
+        }
+
+        .spotlight-img::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent 55%, var(--bg-card) 100%);
+            pointer-events: none
+        }
+
+        .spotlight-content {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 2.25rem
+        }
+
+        .spotlight-glow {
+            position: absolute;
+            top: -35%;
+            right: -8%;
+            width: 320px;
+            height: 320px;
+            background: radial-gradient(circle, rgba(200, 255, 0, .14) 0%, transparent 70%);
+            pointer-events: none
+        }
+
+        .achieve-spotlight::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -60%;
+            width: 40%;
+            height: 100%;
+            background: linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, .06) 50%, transparent 100%);
+            transform: skewX(-20deg);
+            transition: left .9s cubic-bezier(.23, 1, .32, 1)
+        }
+
+        .achieve-spotlight:hover::after {
+            left: 130%
+        }
+
+        .spotlight-medal {
+            position: relative;
+            z-index: 1;
+            font-size: 4rem;
+            line-height: 1;
+            flex-shrink: 0;
+            filter: drop-shadow(0 0 22px rgba(200, 255, 0, .28))
+        }
+
+        .spotlight-body {
+            position: relative;
+            z-index: 1
+        }
+
+        .spotlight-tag {
+            display: inline-block;
+            padding: .3rem .75rem;
+            background: var(--accent-dim);
+            border: 1px solid var(--accent-border);
+            border-radius: 100px;
+            font-size: .68rem;
+            font-weight: 700;
+            color: var(--accent);
+            letter-spacing: .05em;
+            text-transform: uppercase;
+            margin-bottom: .85rem
+        }
+
+        .spotlight-body h3 {
+            font-family: var(--font-d);
+            font-size: 1.35rem;
+            font-weight: 800;
+            letter-spacing: -.01em;
+            color: var(--text);
+            margin-bottom: .65rem
+        }
+
+        .spotlight-body p {
+            font-size: .92rem;
+            color: var(--text-3);
+            line-height: 1.7;
+            max-width: 600px;
+            margin-bottom: .75rem
+        }
+
+        .spotlight-team {
+            font-size: .8rem;
+            color: var(--text-4)
+        }
+
+        .spotlight-team i {
+            color: var(--accent);
+            margin-right: .4rem
+        }
+
+        .achieve-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem
+        }
+
+        .achieve-card {
+            position: relative;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            overflow: hidden;
+            transition: all .25s
+        }
+
+        .achieve-card:hover {
+            border-color: var(--border-h);
+            transform: translateY(-2px)
+        }
+
+        .achieve-img {
+            position: relative;
+            overflow: hidden;
+            border-bottom: 3px solid var(--achieve-clr, var(--accent))
+        }
+
+        .achieve-img img {
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: transform .5s
+        }
+
+        .achieve-card:hover .achieve-img img {
+            transform: scale(1.06)
+        }
+
+        .achieve-body {
+            padding: 1.35rem 1.5rem 1.5rem
+        }
+
+        .achieve-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: .9rem
+        }
+
+        .achieve-medal-sm {
+            font-size: 1.5rem;
+            line-height: 1
+        }
+
+        .achieve-level {
+            padding: .25rem .65rem;
+            border-radius: 100px;
+            font-size: .64rem;
+            font-weight: 700;
+            letter-spacing: .04em;
+            text-transform: uppercase
+        }
+
+        .level-nasional {
+            background: rgba(96, 165, 250, .1);
+            color: #60a5fa;
+            border: 1px solid rgba(96, 165, 250, .2)
+        }
+
+        .level-kampus {
+            background: rgba(45, 212, 191, .1);
+            color: #2dd4bf;
+            border: 1px solid rgba(45, 212, 191, .2)
+        }
+
+        .achieve-card h3 {
+            font-family: var(--font-d);
+            font-size: .98rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: .4rem;
+            line-height: 1.35
+        }
+
+        .achieve-event {
+            font-size: .82rem;
+            color: var(--text-3);
+            line-height: 1.55;
+            margin-bottom: .85rem
+        }
+
+        .achieve-date {
+            font-size: .74rem;
+            color: var(--text-4);
+            display: flex;
+            align-items: center;
+            gap: .4rem
+        }
+
+        .achieve-date i {
+            font-size: .62rem;
+            color: var(--accent)
+        }
+
         /* ══ PROJECTS ══ */
         .projects-grid {
             display: grid;
@@ -1922,6 +2148,28 @@
             .hero-inner {
                 padding-bottom: 5rem;
             }
+
+            .achieve-spotlight {
+                grid-template-columns: 1fr
+            }
+
+            .spotlight-img {
+                min-height: 180px
+            }
+
+            .spotlight-img::after {
+                background: linear-gradient(180deg, transparent 55%, var(--bg-card) 100%)
+            }
+
+            .spotlight-content {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.75rem 1.5rem
+            }
+
+            .achieve-grid {
+                grid-template-columns: 1fr
+            }
         }
 
         @media(max-width:480px) {
@@ -1952,6 +2200,8 @@
                 class="nav-tip">Keahlian</span></a>
         <a href="#experience" class="nav-item" data-section="experience"><i class="fas fa-briefcase"></i><span
                 class="nav-tip">Pengalaman</span></a>
+        <a href="#achievements" class="nav-item" data-section="achievements"><i class="fas fa-trophy"></i><span
+                class="nav-tip">Prestasi</span></a>
         <a href="#projects" class="nav-item" data-section="projects"><i class="fas fa-folder-open"></i><span
                 class="nav-tip">Proyek</span></a>
         <a href="#gallery" class="nav-item" data-section="gallery"><i class="fas fa-image"></i><span
@@ -2083,9 +2333,9 @@
                                 <div class="lbl">Setup Jaringan</div>
                             </div>
                             <div class="stat-card">
-                                <div class="ico"><i class="fas fa-video"></i></div>
-                                <div class="num">0</div>
-                                <div class="lbl">Proyek Video</div>
+                                <div class="ico"><i class="fas fa-trophy"></i></div>
+                                <div class="num">6</div>
+                                <div class="lbl">Penghargaan Lomba</div>
                             </div>
                             <div class="stat-card">
                                 <div class="ico"><i class="fas fa-camera"></i></div>
@@ -2229,23 +2479,26 @@
         <section id="experience" class="section-pad">
             <div class="container">
                 <div class="reveal"><span class="section-label">Pengalaman</span>
-                    <h2 class="section-title">Riwayat Kerja</h2>
+                    <h2 class="section-title">Riwayat Kerja/Magang</h2>
                 </div>
                 <div class="timeline" style="margin-top:2.5rem">
+
                     <div class="tl-item reveal">
                         <div class="tl-dot"></div>
-                        <div class="tl-date">2025 — Sekarang</div>
+                        <div class="tl-date">Desember 2025 — Sekarang</div>
                         <div class="tl-card">
-                            <h3>IT Support &amp; Network Administrator</h3>
-                            <div class="company"><i class="fas fa-building"></i>Balai Pengembangan Kompetensi Wilayah VI
-                                Surabaya</div>
-                            <p>Menyediakan dukungan infrastruktur jaringan, instalasi perangkat, troubleshooting,
-                                pengembangan web, dan pemeliharaan sistem.</p>
+                            <h3>Freelancer Fotografer</h3>
+                            <div class="company"><i class="fas fa-building"></i>Freelance</div>
+                            <p>Menyediakan layanan fotografi profesional untuk berbagai kebutuhan, mulai dari acara
+                                pribadi hingga proyek komersial bisa di chek di instagram Uhygcore.</p>
+                            <a href="https://instagram.com/Uhycore" class="tl-card-link"><i
+                                    class="fab fa-instagram"></i> @Uhycore</a>
                         </div>
                     </div>
+
                     <div class="tl-item reveal">
                         <div class="tl-dot"></div>
-                        <div class="tl-date">2025 — Sekarang</div>
+                        <div class="tl-date">Agustus 2025 — Sekarang</div>
                         <div class="tl-card">
                             <h3>Asisten Laboratorium &amp; Jaringan Komputer</h3>
                             <div class="company"><i class="fas fa-building"></i>Institut Teknologi Adhi Tama Surabaya
@@ -2254,14 +2507,129 @@
                                 berbasis objek.</p>
                         </div>
                     </div>
+
                     <div class="tl-item reveal">
                         <div class="tl-dot"></div>
-                        <div class="tl-date">2022 — 2023</div>
+                        <div class="tl-date">Januari 2026 — Juni 2026</div>
+                        <div class="tl-card">
+                            <h3>Web Developer &amp; Network Administrator</h3>
+                            <div class="company"><i class="fas fa-building"></i>Balai Pengembangan Kompetensi PU Wilayah VI
+                                Surabaya</div>
+                            <p>Menyediakan dukungan infrastruktur jaringan, instalasi perangkat, troubleshooting,
+                                pengembangan web, dan pemeliharaan sistem.</p>
+                        </div>
+                    </div>
+
+                    <div class="tl-item reveal">
+                        <div class="tl-dot"></div>
+                        <div class="tl-date">Agustus 2025 — Desember 2025</div>
+                        <div class="tl-card">
+                            <h3>IT Support &amp; System Administrator</h3>
+                            <div class="company"><i class="fas fa-building"></i>Balai Pengembangan Kompetensi PU Wilayah VI
+                                Surabaya</div>
+                            <p>Menyediakan dukungan infrastruktur jaringan, instalasi perangkat, troubleshooting,
+                                pengembangan web, dan pemeliharaan sistem.</p>
+                        </div>
+                    </div>
+
+                    <div class="tl-item reveal">
+                        <div class="tl-dot"></div>
+                        <div class="tl-date">Agustus 2021 — Desember 2021</div>
                         <div class="tl-card">
                             <h3>Magang Admin &amp; Teknisi</h3>
                             <div class="company"><i class="fas fa-building"></i>CV Intermedia</div>
                             <p>Servis printer dan proyektor, instalasi &amp; perawatan CCTV, serta dukungan administrasi
                                 kantor.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- ══ ACHIEVEMENTS ══ -->
+        <section id="achievements" class="section-pad">
+            <div class="container">
+                <div class="reveal"><span class="section-label">Prestasi</span>
+                    <h2 class="section-title">Penghargaan & Kompetisi</h2>
+                    <p class="section-desc">Aktif mengikuti lomba-lomba nasional maupun internasional, mulai dari
+                        pemrograman, videografi, hingga fotografi.</p>
+                </div>
+
+                <div class="achieve-spotlight reveal" style="margin-top:2.5rem">
+                    <div class="spotlight-img"><img src="images/juara1.jpeg" alt="Silver Award ICETSD 2026 Malaysia">
+                    </div>
+                    <div class="spotlight-content">
+                        <div class="spotlight-glow"></div>
+                        <div class="spotlight-medal">🥈</div>
+                        <div class="spotlight-body">
+                            <span class="spotlight-tag"><i class="fas fa-earth-asia"
+                                    style="margin-right:.35rem"></i>Internasional · ICETSD 2026, Malaysia</span>
+                            <h3>Silver Award — Innovation &amp; Invention Competition</h3>
+                            <p>Meraih Silver Award bersama Tim AURA dengan proyek "An IoT Integrated Philanthropy
+                                Platform with Real-Time Asset Monitoring and Intelligent Aid Distribution Tracking" pada
+                                3rd International Conference on Engineering &amp; Technologies for Sustainable
+                                Development.</p>
+                            <div class="spotlight-team"><i class="fas fa-users"></i>Tim AURA · 4 anggota · Program
+                                Studi Teknik Informatika ITATS</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proj-sub-label reveal"><i class="fas fa-medal"></i> Penghargaan Lainnya</div>
+                <div class="achieve-grid">
+                    <div class="achieve-card reveal" style="--achieve-clr:#fbbf24">
+                        <div class="achieve-img"><img src="images/juara2.jpg" alt="Juara 1 Photography Competition">
+                        </div>
+                        <div class="achieve-body">
+                            <div class="achieve-top">
+                                <span class="achieve-medal-sm">🥇</span>
+                                <span class="achieve-level level-nasional">Nasional</span>
+                            </div>
+                            <h3>Juara 1 Photography Competition</h3>
+                            <p class="achieve-event">Rakernas IndoCEISS 2026 · karya "Es Baru"</p>
+                            <div class="achieve-date"><i class="fas fa-calendar"></i>Juli 2026</div>
+                        </div>
+                    </div>
+                    <div class="achieve-card reveal" style="--achieve-clr:#a1a1aa">
+                        <div class="achieve-img"><img src="images/juara3.jpg" alt="Juara 2 Short Movie Competition">
+                        </div>
+                        <div class="achieve-body">
+                            <div class="achieve-top">
+                                <span class="achieve-medal-sm">🥈</span>
+                                <span class="achieve-level level-nasional">Nasional</span>
+                            </div>
+                            <h3>Juara 2 Short Movie Competition</h3>
+                            <p class="achieve-event">Rakernas IndoCEISS 2026 · karya "Quadra"</p>
+                            <div class="achieve-date"><i class="fas fa-calendar"></i>Juli 2026</div>
+                        </div>
+                    </div>
+                    <div class="achieve-card reveal" style="--achieve-clr:#2dd4bf">
+                        <div class="achieve-img"><img src="images/juara4.jpg" alt="Juara 1 Creative Video Competition">
+                        </div>
+                        <div class="achieve-body">
+                            <div class="achieve-top">
+                                <span class="achieve-medal-sm">🥇</span>
+                                <span class="achieve-level level-kampus">Kampus</span>
+                            </div>
+                            <h3>Juara 1 Creative Video Competition</h3>
+                            <p class="achieve-event">Civil Day ITATS 2026 · HMTS ITATS</p>
+                            <div class="achieve-date"><i class="fas fa-calendar"></i>2026</div>
+                        </div>
+                    </div>
+                    <div class="achieve-card reveal" style="--achieve-clr:#2dd4bf">
+                        <div class="achieve-img"><img src="images/juara5.jpg"
+                                alt="Juara 1 Lomba Pemrograman Terstruktur"></div>
+                        <div class="achieve-body">
+                            <div class="achieve-top">
+                                <span class="achieve-medal-sm">🥇</span>
+                                <span class="achieve-level level-kampus">Kampus</span>
+                            </div>
+                            <h3>Juara 1 Lomba Pemrograman Terstruktur</h3>
+                            <p class="achieve-event">Program Studi Teknik Informatika, ITATS</p>
+                            <div class="achieve-date"><i class="fas fa-calendar"></i>Januari 2024</div>
                         </div>
                     </div>
                 </div>
